@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, Button, Form, FormControl, Container } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap';
 
 
@@ -7,8 +7,7 @@ const Header = () => {
  
   return (
     <header>
-    <Navbar bg="primary" variant="dark" expand="lg">
-      <Container>
+    <Navbar bg="primary" variant="dark" expand="lg" className="p-3">
       
       <LinkContainer to="/">
         <Navbar.Brand>Google Books Finder</Navbar.Brand>
@@ -30,7 +29,7 @@ const Header = () => {
      
       </Navbar.Collapse>
       </div>
-    </Container>
+  
     </Navbar>
     </header>
   )

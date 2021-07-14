@@ -1,27 +1,21 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Search from './pages/Search'
 import Saved from './pages/Saved'
+import Hero from './components/Hero';
 
 function App() {
-  const [searched, setSearched] = useState([]);
-  const [saved, setSaved] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-
-
   return (
     <Router>
       <Header />
       <div className="App">
         <Switch>
           <Route exact path="/">
-          <Search searched={searched} />
-            
+          <Search />
           </Route>
           <Route path="/saved">
-          <Saved saved={saved} />
+          <Saved  />
           </Route>
         </Switch>
       </div>
