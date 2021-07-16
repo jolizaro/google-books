@@ -10,7 +10,7 @@ const Header = () => {
     <Navbar bg="primary" variant="dark" expand="lg" className="p-3">
       
       <LinkContainer to="/">
-        <Navbar.Brand>Google Books Finder</Navbar.Brand>
+        <Navbar.Brand style={{fontSize: '30px'}}>Google Books Finder</Navbar.Brand>
       </LinkContainer>
       <div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,10 +18,10 @@ const Header = () => {
    
         <Nav className="mr-auto">
           <LinkContainer to="/">
-            <Nav.Link>Search</Nav.Link>
+            <Nav.Link className="header-links">Search</Nav.Link>
           </LinkContainer>
            <LinkContainer to="/saved">
-            <Nav.Link>Saved</Nav.Link>
+            <Nav.Link className="header-links">Saved</Nav.Link>
           </LinkContainer>
           
           

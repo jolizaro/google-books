@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BookItem = ({ book, button }) => {
+const BookItem = ({ book, button, btnFunction }) => {
   return (
     <div className="book-card">
       <div className="card-top">
@@ -9,8 +9,8 @@ const BookItem = ({ book, button }) => {
           <h4>{book.authors}</h4>
         </div>
         <div>
-          <button>View</button>
-          <button><a href={book.link}>{button}</a></button>
+          <button><a href={book.link}>View</a></button>
+          <button onClick={() => btnFunction(book)}>{button}</button>
         </div>
       </div>
       <div className="card-bottom">

@@ -22,7 +22,7 @@ const deleteBook = asyncHandler(async (req, res)=>{
     const book = await Book.findById(req.params.id)
     if (book){
         book.remove()
-        res.status(200).send("book deleted");
+        res.status(200).json({ message: "Book deleted" });
     }else{
         res.status(404)
         throw new Error('Book not found');
