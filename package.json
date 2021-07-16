@@ -10,7 +10,7 @@
     "seed": "node seed",
     "destroy": "node seed -d",
     "install-client":"cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "start": "node server.js"
   },
   "repository": {
